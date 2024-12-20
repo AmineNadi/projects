@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./lib/swipper.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+    <script defer src="./lib/swipper.js"></script>
+    <script defer  src="./script.js"></script>
+    <title>Tailwind css</title>
+</head>
+<body x-data="{ open: false }" :class="{ 'max-lg:h-svh fixed overflow-hidden': open }" class="overflow-x-hidden font-Inter">
+    <header class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px]">
+        <div class="flex w-full justify-between items-center py-3">
+            <a class="max-w-[107px]" href="/">
+                <img src="./svg/logo.svg" alt="">
+            </a>
+            <nav class="max-lg:fixed max-lg:h-svh duration-200 max-lg:w-full max-lg:px-5 max-lg:pb-5 max-lg:pt-16 max-lg:-left-full max-lg:bg-white max-lg:flex max-lg:justify-between z-[99]" 
+            :class="{'max-lg:inset-0 ease-in': open, 'max-lg:-left-full ease-out': !open}">
+                
+                <ul class="flex items-center max-lg:flex-col max-lg:items-start max-lg:gap-5">
+                    <li class="link-header "><a class="" href="https://icadent.fr/amenagement/">Home</a></li> 
+                    <li class="link-header "><a href="https://icadent.fr/equipement/">Features</a></li> 
+                    <li class="link-header "><a class="" href="https://icadent.fr/maintenance/">Community</a></li> 
+                    <li class="link-header "><a href="https://icadent.fr/nos-experts/">Blog</a></li> 
+                    <li class="link-header "><a href="https://icadent.fr/actualites/">Pricing</a></li> 
+                    <a class="flex items-center gap-1 btn-primary ml-2" href="https://icadent.fr/contact/">Register Now
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.52582 8.4707L10.2449 6.7516C10.4488 6.54772 10.4488 6.21716 10.2449 6.01328L8.52582 4.29418M10.092 6.38244L2.43506 6.38244" stroke="white" stroke-width="0.765676" stroke-linecap="round"/>
+                            </svg>
+                            
+                    </a></li> 
+                </ul>
+                
+            </nav>
+            <div class="lg:hidden z-[99]" @click="open = true"  :class="{ 'max-lg:hidden': open }">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+            <div class="hidden z-[99] fixed top-[12px] right-[25px]" @click="open = false"  :class="{ 'max-lg:block': open }">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="bg-silver mb-[28px]">
+            <div class="max-w-[1002px] min-h-[calc(100svh-60px)] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] flex items-center">
+                <div class="swiper mySwiper cursor-pointer">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex max-[767px]:flex-col justify-between items-center gap-[72px] ">
+                            <div class="max-w-[457px]">
+                                <h1 class="text-secondary-200 text-[45px] mb-[11px] max-[767px]:text-[35px]">Lessons and insights <span class="text-primary-100">from 8 years</span></h1>
+                                <p class="text-secondary-100 text-xs mb-[22px]">Where to grow your business as a photographer: site or social media?</p>
+                                <a class="btn-primary" href="http://" target="_blank">Register</a>
+                            </div>
+                            <img class="max-w-[272px] object-cover" src="./svg/hero1.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex max-[767px]:flex-col justify-between items-center gap-[72px] ">
+                            <div class="max-w-[457px]">
+                                <h1 class="text-secondary-200 text-[45px] mb-[11px]">Lessons and insights <span class="text-primary-100">from 8 years</span></h1>
+                                <p class="text-secondary-100 text-xs mb-[22px]">Where to grow your business as a photographer: site or social media?</p>
+                                <a class="btn-primary" href="http://" target="_blank">Register</a>
+                            </div>
+                            <img class="max-w-[272px] object-cover" src="./svg/hero1.svg" alt="">
+                        </div>
+                        <div class="swiper-slide flex max-[767px]:flex-col justify-between items-center gap-[72px] ">
+                            <div class="max-w-[457px]">
+                                <h1 class="text-secondary-200 text-[45px] mb-[11px]">Lessons and insights <span class="text-primary-100">from 8 years</span></h1>
+                                <p class="text-secondary-100 text-xs mb-[22px]">Where to grow your business as a photographer: site or social media?</p>
+                                <a class="btn-primary" href="http://" target="_blank">Register</a>
+                            </div>
+                            <img class="max-w-[272px] object-cover" src="./svg/hero1.svg" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-pagination mb-4"></div>
+            </div>
+        </section>
+        <section class="mb-[28px]">
+            <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] " >
+                <div class="text-center max-w-[378px] m-auto mb-3">
+                    <h2 class="text-secondary-200 text-[25px] mb-[6px] font-semibold">Our Clients</h2>
+                    <p class="text-secondary-100 text-xs">We have been working with some Fortune 500+ clients</p>
+                </div>
+                <div class="grid grid-cols-7 gap-[94px]">
+                    <img src="./svg/client1.svg" alt="" >
+                    <img src="./svg/client2.svg" alt="" >
+                    <img src="./svg/client3.svg" alt="" >
+                    <img src="./svg/client4.svg" alt="" >
+                    <img src="./svg/client5.svg" alt="" >
+                    <img src="./svg/client6.svg" alt="" >
+                    <img src="./svg/client3.svg" alt="" >
+                </div>
+            </div>
+        </section>
+        <section class="mb-[28px]">
+            <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] " >
+                <div class="text-center max-w-[378px] m-auto mb-3">
+                    <h2 class="text-secondary-200 text-[25px] mb-[6px] font-semibold">Manage your entire community in a single system</h2>
+                    <p class="text-secondary-100 text-xs">Who is Nextcent suitable for?
+                    </p>
+                </div>
+                <div class="grid grid-cols-3 gap-[88px] max-[767px]:flex max-[767px]:flex-col max-[767px]:gap-6">
+                    <div class="px-[22px] py-[17px] flex flex-col items-center justify-center rounded-md shadow-custom-light text-center">
+                        <div class="relative bg-[#E8F5E9] w-9 h-9 rounded-t-[12px] rounded-tr-[4px] rounded-br-[7px]">
+                            <img class="absolute top-0 -left-2" src="./svg/card-3.svg" alt="">
+                        </div>
+                        <h3 class="text-secondary-200 text-[20px] font-bold">Membership Organisations</h3>
+                        <p class="text-secondary-100 text-[10px]">Our membership management software provides full automation of membership renewals and payments</p>
+                    </div>
+                    <div class="px-[22px] py-[17px] flex flex-col items-center justify-center rounded-md shadow-custom-light text-center">
+                        <div class="relative bg-[#E8F5E9] w-9 h-9 rounded-t-[12px] rounded-tr-[4px] rounded-br-[7px]">
+                            <img class="absolute top-0 -left-2" src="./svg/card-2.svg" alt="">
+                        </div>
+                        <h3 class="text-secondary-200 text-[20px] font-bold">National Associations</h3>
+                        <p class="text-secondary-100 text-[10px]">Our membership management software provides full automation of membership renewals and payments</p>
+                    </div>
+                    <div class="px-[22px] py-[17px] flex flex-col items-center justify-center rounded-md shadow-custom-light text-center">
+                        <div class="relative bg-[#E8F5E9] w-9 h-9 rounded-t-[12px] rounded-tr-[4px] rounded-br-[7px]">
+                            <img class="absolute top-0 -left-2" src="./svg/card-1.svg" alt="">
+                        </div>
+                        <h3 class="text-secondary-200 text-[20px] font-bold">Clubs And Groups</h3>
+                        <p class="text-secondary-100 text-[10px]">Our membership management software provides full automation of membership renewals and payments</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] flex max-[767px]:flex-col justify-between items-center gap-8 py-8">
+                <div class="max-w-[307px] w-full">
+                    <img class="w-full object-cover" src="./svg/unseen.svg" alt="">
+                </div>
+                <div class="max-w-[460px] w-full">
+                    <h2 class="text-secondary-200 text-2xl font-semibold mb-3">The unseen of spending three years at Pixelgrade</h2>
+                    <p class="text-secondary-100 text-[10px] mb-[22px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
+                    <a class="btn-primary" href="">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <section class="bg-silver">
+            <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] py-11">
+                <div class="flex justify-between items-center max-[767px]:flex-col max-[767px]:gap-5">
+                    <div class="max-w-[375px] w-full">
+                        <h2 class="text-secondary-200 text-[25px] mb-[6px] font-semibold">Helping a local <span class="text-primary-100 block">business reinvent itself</span></h2>
+                        <p class="text-secondary-100 text-xs">We reached here with our hard work and dedication</p>
+                    </div>
+                    <div class="max-w-[375px] w-full grid grid-cols-2 gap-x-5 gap-y-7">
+                        <div class=" flex items-center">
+                            <img src="./svg/card-1.svg" alt="" >
+                            <div class="ml-3">
+                                <h3 class=" text-secondary-200 font-bold text-xl">2,245,341</h3>
+                                <span class="text-secondary-100 text-xs">Members</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="./svg/card-2.svg" alt="" >
+                            <div class="ml-3">
+                                <h3 class=" text-secondary-200 font-bold text-xl">46,328</h3>
+                                <span class="text-secondary-100 text-xs">Clubs</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="./svg/card-3.svg" alt="" >
+                            <div class="ml-3">
+                                <h3 class=" text-secondary-200 font-bold text-xl">828,867</h3>
+                                <span class="text-secondary-100 text-xs">Event Bookings</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="./svg/card-1.svg" alt="" >
+                            <div class="ml-3">
+                                <h3 class=" text-secondary-200 font-bold text-xl">1,926,436</h3>
+                                <span class="text-secondary-100 text-xs">Payments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] flex justify-between items-center gap-8 py-8 max-[767px]:flex-col">
+                <div class="max-w-[307px] w-full">
+                    <img class="w-full object-cover" src="./svg/desgin.svg" alt="">
+                </div>
+                <div class="max-w-[460px] w-full">
+                    <h2 class="text-secondary-200 text-2xl font-semibold mb-3">How to design your site footer like we did</h2>
+                    <p class="text-secondary-100 text-[10px] mb-[22px]">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
+                    <a class="btn-primary" href="">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <section class="bg-silver mb-8">
+            <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] py-6">
+                <div class="flex justify-between items-center max-[767px]:flex-col">
+                    <div class="max-w-[227px] w-full" >
+                        <img class="rounded-md drop-shadow-[0_5.56856px_11.1371px_rgba(171, 190, 209, 0.4)]" src="./svg/image-t.svg" alt="">
+                    </div>
+                    <div class="max-w-[520px] w-full">
+                        <p class="text-xs text-secondary-100 font-medium mb-3">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
+                        <span class="text-primary-100 font-semibold text-[14px] mb-[6px]">Tim Smith</span>
+                        <p class="text-secondary-300 text-xs mb-[22px]">British Dragon Boat Racing Association</p>
+                        <div class="flex gap-[27px] flex-wrap">
+                            <img src="./svg/client1.svg" alt="">
+                            <img src="./svg/client6.svg" alt="">
+                            <img src="./svg/client4.svg" alt="">
+                            <img src="./svg/client3.svg" alt="">
+                            <img src="./svg/client2.svg" alt="">
+                            <img src="./svg/client5.svg" alt="">
+                            <a class="font-semibold text-primary-100 text-sm flex items-center" href="http://" target="_blank" >Meet all customers
+                                <svg class="ml-[5px]" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.7134 11.4093L14.0055 9.11726C14.2773 8.84543 14.2773 8.4047 14.0055 8.13287L11.7134 5.84079M13.8016 8.62507L4.05664 8.62507" stroke="#4CAF4F" stroke-width="1.0441" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-[60px]">
+            <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px] ">
+                <h2 class="text-[25px] font-semibold text-secondary-200 text-center">Caring is the new marketing</h2>
+                <p class="text-secondary-100 text-xs mb-3 max-w-[437px] mx-auto text-center">The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​</p>
+                <div class="grid grid-cols-3 gap-4 max-[767px]:grid-cols-1 max-[767px]:gap-8">
+                    <div class="pb-[56px] relative">
+                        <img class="rounded-md object-cover w-full" src="./svg/caring1.svg" alt="">
+                        <div class="absolute bottom-0 p-[11px] left-1/2 -translate-x-1/2 bg-silver rounded-md shadow-custom-dark text-center max-w-86p w-full">
+                            <p class="font-semibold text-[14px] text-secondary-100 mb-3">What are your safeguarding responsibilities and how can you manage them?</p>
+                            <a class="text-primary-100 text-[14px] font-semibold flex items-center justify-center" href="">
+                                Readmore
+                                <svg class="ml-[5px]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.9346 11.866L14.2267 9.57387C14.4985 9.30204 14.4985 8.86132 14.2267 8.58948L11.9346 6.2974M14.0228 9.08168L4.27783 9.08168" stroke="#4CAF4F" stroke-width="1.0441" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pb-[56px] relative">
+                        <img class="rounded-md object-cover w-full" src="./svg/caring2.svg" alt="">
+                        <div class="absolute bottom-0 p-[11px] left-1/2 -translate-x-1/2 bg-silver rounded-md shadow-custom-dark text-center max-w-86p w-full">
+                            <p class="font-semibold text-[14px] text-secondary-100 mb-3">What are your safeguarding responsibilities and how can you manage them?</p>
+                            <a class="text-primary-100 text-[14px] font-semibold flex items-center justify-center" href="">
+                                Readmore
+                                <svg class="ml-[5px]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.9346 11.866L14.2267 9.57387C14.4985 9.30204 14.4985 8.86132 14.2267 8.58948L11.9346 6.2974M14.0228 9.08168L4.27783 9.08168" stroke="#4CAF4F" stroke-width="1.0441" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pb-[56px] relative">
+                        <img class="rounded-md object-cover w-full" src="./svg/caring2.svg" alt="">
+                        <div class="absolute bottom-0 p-[11px] left-1/2 -translate-x-1/2 bg-silver rounded-md shadow-custom-dark text-center max-w-86p w-full">
+                            <p class="font-semibold text-[14px] text-secondary-100 mb-3">What are your safeguarding responsibilities and how can you manage them?</p>
+                            <a class="text-primary-100 text-[14px] font-semibold flex items-center justify-center" href="">
+                                Readmore
+                                <svg class="ml-[5px]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.9346 11.866L14.2267 9.57387C14.4985 9.30204 14.4985 8.86132 14.2267 8.58948L11.9346 6.2974M14.0228 9.08168L4.27783 9.08168" stroke="#4CAF4F" stroke-width="1.0441" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="">
+                <div class="bg-silver py-[22px]">
+                    <div class="flex flex-col items-center justify-center max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px]">
+                        <h2 class="text-blackLight font-semibold text-[45px] mb-[22px] max-w-[670px] mx-auto text-center max-[767px]:text-[32px]">
+                            Pellentesque suscipit fringilla libero eu.
+                        </h2>
+                        <a class="btn-primary flex gap-[5px] items-center" href="http://" target="_blank">Get a Demo
+                            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.71673 7.75015L10.4358 6.03105C10.6397 5.82717 10.6397 5.49661 10.4358 5.29273L8.71673 3.57363M10.2829 5.66189L2.62598 5.66189" stroke="white" stroke-width="0.765676" stroke-linecap="round"/>
+                                </svg>
+                                
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-blackLight pt-[45px] pb-[52px]">
+                    <div class="max-w-[1002px] mx-auto px-[25px] sm:px-[40px] lg:px-[100px]">
+                        <div class="px-[14px] flex justify-between gap-20 max-[767px]:flex-col max-[767px]:gap-5">
+                            <div class="max-w-[243px] w-full">
+                                <img class="mb-[28px]" src="./svg/footer-logo.svg" alt="">
+                                <p class="text-silver text-[10px] mb-[28px] ">Copyright © 2020 Landify UI Kit. <br> All rights reserved</p>
+                                <div class="flex gap-3 items-center">
+                                    <a href="/" class="relative bg-white bg-opacity-10 w-[22px] h-[22px] rounded-full">
+                                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./svg/instagram.svg" alt="">
+                                    </a>
+                                    <a href="/" class="relative bg-white bg-opacity-10 w-[22px] h-[22px] rounded-full">
+                                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./svg/twitter.svg" alt="">
+                                    </a>
+                                    <a href="/" class="relative bg-white bg-opacity-10 w-[22px] h-[22px] rounded-full">
+                                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./svg/ytb.svg" alt="">
+                                    </a>
+                                    <a href="/" class="relative bg-white bg-opacity-10 w-[22px] h-[22px] rounded-full">
+                                        <img class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" src="./svg/social1.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="max-w-[445px] w-full flex gap-5 justify-between max-[767px]:flex-wrap max-[767px]:justify-start max-[767px]:gap-x-10">
+                                <div>
+                                    <h3 class="text-white text-[14px] font-semibold mb-4">Company</h3>
+                                    <ul class="text-silver text-[10px] list-none flex flex-col gap-2">
+                                        <li><a class="link-footer" href="">about us</a></li>
+                                        <li><a class="link-footer" href="">blog</a></li>
+                                        <li><a class="link-footer" href="">contact us</a></li>
+                                        <li><a class="link-footer" href="">pricing</a></li>
+                                        <li><a class="link-footer" href="">testimonials</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-white text-[14px] font-semibold mb-4"">Support</h3>
+                                    <ul class="text-silver text-[10px] list-none flex flex-col gap-2"">
+                                        <li><a class="link-footer" href="">help center</a></li>
+                                        <li><a class="link-footer" href="">terms of service </a></li>
+                                        <li><a class="link-footer" href="">legal</a></li>
+                                        <li><a class="link-footer" href="">privacy policy</a></li>
+                                        <li><a class="link-footer" href="">status</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-white text-[14px] font-semibold mb-4"">Stay up to date </h3>
+                                    <div class="relative max-w-[177px] ">
+                                        <input class="bg-white bg-opacity-20 rounded-md outline-0 px-[9px] py-[7px] text-[#D9DBE1] text-[10px] w-[177px] h-[28px]" placeholder="Your email adress" type="text">
+                                        <button class="absolute right-2 top-1/2 -translate-y-1/2" type="submit">
+                                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4607 0.766873C11.6025 0.908682 11.6505 1.11919 11.5843 1.30848L7.92989 11.7495C7.85918 11.9516 7.6723 12.09 7.45843 12.0987C7.24456 12.1074 7.04703 11.9847 6.96009 11.7891L4.95343 7.2741L0.438447 5.26744C0.242844 5.18051 0.120129 4.98298 0.128855 4.7691C0.13758 4.55523 0.275978 4.36835 0.478013 4.29764L10.9191 0.643276C11.1083 0.577025 11.3189 0.625064 11.4607 0.766873ZM5.97162 6.99421L7.37941 10.1617L9.84304 3.12279L5.97162 6.99421ZM9.10475 2.38449L2.0658 4.84813L5.23332 6.25592L9.10475 2.38449Z" fill="white"/>
+                                                </svg>
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+</body>
+</html>

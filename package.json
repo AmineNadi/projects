@@ -1,0 +1,16 @@
+{
+  "name": "TailwindPrj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build-css": "tailwind build src/style.css -o public/style.css",
+    "start-css": "tailwindcss -o public/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.12"
+  }
+}
